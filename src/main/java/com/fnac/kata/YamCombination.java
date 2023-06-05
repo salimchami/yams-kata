@@ -24,7 +24,7 @@ public class YamCombination {
         incrementScoreForPairs();
         incrementScoreForBrelan();
 
-        if (isASuite(yamCounts)) {
+        if (isASequence(yamCounts)) {
             return 7;
         }
         if (hasNoCombination()) {
@@ -50,7 +50,7 @@ public class YamCombination {
         return pairs == 0 && brelans == 0 && score == 0;
     }
 
-    private boolean isASuite(Map<ThimbleValue, SameThimblesCount> yamCounts) {
+    private boolean isASequence(Map<ThimbleValue, SameThimblesCount> yamCounts) {
         return yamCounts.size() == 5 && max - min == 4;
     }
 
